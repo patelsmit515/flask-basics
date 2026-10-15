@@ -114,7 +114,6 @@ def update_student(student_id):
 
 
 def validate_student_data(data):
-    """Validate student fields without adding a new student."""
     if not isinstance(data.get("name"), str) or not data["name"].strip():
         return None, "Valid student name is required"
 
@@ -172,4 +171,4 @@ def add_student_from_form():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
